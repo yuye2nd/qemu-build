@@ -17,3 +17,6 @@ jobs:
       - run: sudo systemctl enable cpolar
       - run: sudo systemctl start cpolar
       - run: cat /usr/local/etc/cpolar/cpolar.yml
+      - run: ls
+      - run: ls ${{github.workspace}}
+    
