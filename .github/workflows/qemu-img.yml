@@ -12,9 +12,8 @@ jobs:
       - run: sudo apt install qemu-utils qemu-system-x86 -y
       - run: qemu-img create ${{ github.workspace }}/new.qcow2 32G -f qcow2
       - run: echo "job create complete"
-      - run: wget https://www.cpolar.com/static/downloads/releases/3.3.18/cpolar-stable-linux-amd64.zip
-      - run: unzip cpolar-stable-linux-amd64.zip
-      - run: ./cpolar authtoken Y2ZmNWIxYzMtM2I3NS00NWU2LTg3MDctZDUyNTFmYTE2ZGY5
-      - run: ls
-      - run: ./cpolar tcp 1
-      
+      - run: curl -sL https://git.io/cpolar | sudo bash
+      - run: cpolar authtoken Y2ZmNWIxYzMtM2I3NS00NWU2LTg3MDctZDUyNTFmYTE2ZGY5
+      - run: sudo systemctl enable cpolar
+      - run: sudo systemctl start cpolar
+      - run: cat /usr/local/etc/cpolar/cpolar.yml
