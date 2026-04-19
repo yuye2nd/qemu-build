@@ -9,7 +9,7 @@ jobs:
       - name: Create img
         uses: actions/checkout@v5
       - run: sudo apt update
-      - run: sudo apt install qemu-utils qemu-system-x86 neofetch -y
+      - run: sudo apt install qemu-utils qemu-system-x86-headless neofetch -y
       - run: sudo qemu-img create new.qcow2 32G -f qcow2
       - run: echo "job create complete"
       - run: sudo curl -L https://www.cpolar.com/static/downloads/install-release-cpolar.sh | sudo bash
