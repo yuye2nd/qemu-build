@@ -1,0 +1,11 @@
+job: Create-img
+  Create-img:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "start create img"
+      - name: Create img
+        uses: actions/checkout@v5
+      - run: sudo apt update
+      - run: sudo apt install qemu-utils
+      - run: qemu-img create ${{ github.workspace }}/new.qcow2 32G -f qcow2
+      - run: echo "job complete"
