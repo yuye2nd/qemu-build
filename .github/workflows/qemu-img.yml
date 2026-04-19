@@ -1,5 +1,6 @@
 name: qemu-img create 32g
 run-name: Create 32g qcow2
+on: workflow_dispatch
 jobs:
   Create-img:
     runs-on: ubuntu-latest
