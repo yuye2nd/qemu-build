@@ -1,4 +1,6 @@
-job: Create-img
+name: qemu-img create 32g
+run-name: Create 32g qcow2
+jobs:
   Create-img:
     runs-on: ubuntu-latest
     steps:
