@@ -21,4 +21,4 @@ jobs:
       - run: sudo cp .github/workflows/script/cpolar.yml /usr/local/etc/cpolar/cpolar.yml
       - run: sudo systemctl enable cpolar
       - run: sudo systemctl start cpolar
-      - run: qemu-system-x86_64 -cpu core2duo -M q35 -m 4096 --accel kvm -hda new.qcow2 -vga vmware -vnc :1
+      - run: sudo qemu-system-x86_64 -cpu core2duo -M q35 -m 4096 --accel kvm -hda new.qcow2 -vga vmware -vnc :1
