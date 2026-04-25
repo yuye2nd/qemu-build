@@ -23,3 +23,6 @@ jobs:
       - run: sudo systemctl start cpolar
       - run: neofetch
       - run: sudo qemu-system-x86_64 -cpu core2duo -M q35 -m 12288 -smp 4,cores=4 --enable-kvm -hda new.qcow2 -vga vmware -vnc :4
+      - run: git add .
+      - run: git commit "commit in workflow"
+      - run: git push
