@@ -17,11 +17,11 @@ jobs:
       - run: git clone https://github.com/yuye2nd/mc-file.git
       - run: ls
       - run: cd mc-file
-      - run: wget https://fill-data.papermc.io/v1/objects/f52c408490a0225611e67907a3ca19f7e6da2c6bc899e715d5f46844e7103c39/folia-1.21.11-14.jar
+      - run: wget https://fill-data.papermc.io/v1/objects/b0d55be3ba19cb6e040f0e7fba400e5224a271fbc7db73a9683aef7468425af9/folia-1.20.4-31.jar
       - run: ls
       - run: java --version
-      - run: java -server -Xms1G -Xmx12G -jar folia-1.21.11-14.jar
-      - run: git add .
+      - run: java -server -Xms1G -Xmx12G -XX:+AlwaysPreTouch -XX:+DisableExplicitGC -XX:+ParallelRefProcEnabled -XX:+PerfDisableSharedMem -XX:+UnlockExperimentalVMOptions -XX:+UseG1GC -XX:G1HeapRegionSize=8M -XX:G1HeapWastePercent=5 -XX:G1MaxNewSizePercent=40 -XX:G1MixedGCCountTarget=4 -XX:G1MixedGCLiveThresholdPercent=90 -XX:G1NewSizePercent=30 -XX:G1RSetUpdatingPauseTimePercent=5 -XX:G1ReservePercent=20 -XX:InitiatingHeapOccupancyPercent=15 -XX:MaxGCPauseMillis=200 -XX:MaxTenuringThreshold=1 -XX:SurvivorRatio=32 -jar folia-1.20.4-31.jar
+      - run: git add *
       - run: git commit -m "sync file"
       - run: git branch -M main
       - run: git remote add origin https://github.com/yuye2nd/mc-file.git
