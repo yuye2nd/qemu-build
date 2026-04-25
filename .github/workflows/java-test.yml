@@ -10,4 +10,5 @@ jobs:
       - run: chmod +x ./.github/workflows/script/*
       - run: ./.github/workflows/script/install-dep.sh
       - run: ./.github/workflows/script/configure-cpolar.sh
+      - run: cd ${{ github.workspace }}
       - run: ./.github/workflows/script/runjava.sh
