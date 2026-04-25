@@ -3,3 +3,6 @@ tunnels:
   qemu-test:
     proto: tcp
     addr: "4"
+  vnc:
+    proto: tcp
+    addr: "5904"
