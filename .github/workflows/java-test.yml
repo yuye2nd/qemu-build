@@ -8,18 +8,21 @@ jobs:
       - name: Java Run
         uses: actions/checkout@v5
       - run: chmod +x ./.github/workflows/script/*
-      - run: ./.github/workflows/script/install-dep.sh
       - run: ./.github/workflows/script/configure-cpolar.sh
       - run: cd ${{ github.workspace }}
+      - run: sudo apt install openjdk-25-jdk
 
-      
-      - run: mkdir folia
-      - run: cd folia
+      - run: mkdir mc
+      - run: cd mc
+      - run: git clone https://github.com/yuye2nd/mc-file.git
+      - run: cd *
       - run: wget https://fill-data.papermc.io/v1/objects/f52c408490a0225611e67907a3ca19f7e6da2c6bc899e715d5f46844e7103c39/folia-1.21.11-14.jar
       - run: ls
       - run: java --version
       - run: java -server -Xms1G -Xmx12G -jar folia-1.21.11-14.jar
-      - run: cd ..
+      - run: git init
       - run: git add .
-      - run: git commit -m "Testing java runner"
-      - run: git push
+      - run: git commit -m "sync file"
+      - run: git branch -M main
+      - run: git remote add origin https://github.com/yuye2nd/mc-file.git
+      - run: git push -u origin main
