@@ -15,7 +15,8 @@ jobs:
       - run: mkdir mc
       - run: cd mc
       - run: git clone https://github.com/yuye2nd/mc-file.git
-      - run: cd *
+      - run: ls
+      - run: cd mc-file
       - run: wget https://fill-data.papermc.io/v1/objects/f52c408490a0225611e67907a3ca19f7e6da2c6bc899e715d5f46844e7103c39/folia-1.21.11-14.jar
       - run: ls
       - run: java --version
