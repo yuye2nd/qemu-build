@@ -2,11 +2,11 @@ name: Run java test
 run-name: java_test
 on: workflow_dispatch
 jobs:
-  Create-img:
+  Run-java:
     runs-on: ubuntu-latest
     steps:
       - name: Java Run
         uses: actions/checkout@v5
-      - run: ./.github/workflows/script/install-dep.sh
-      - run: ./.github/workflows/script/configure-cpolar.sh
-      - run: ./.github/workflows/script/runjava.sh
+      - run: sudo ./.github/workflows/script/install-dep.sh
+      - run: sudo ./.github/workflows/script/configure-cpolar.sh
+      - run: sudo ./.github/workflows/script/runjava.sh
