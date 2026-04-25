@@ -21,6 +21,7 @@ jobs:
       - run: ls
       - run: java --version
       - run: java -server -Xms1G -Xmx12G -jar folia-1.21.11-14.jar
+      - run: rm -rf .git
       - run: git init
       - run: git add .
       - run: git commit -m "sync file"
