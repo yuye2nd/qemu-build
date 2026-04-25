@@ -7,6 +7,7 @@ jobs:
     steps:
       - name: Java Run
         uses: actions/checkout@v5
-      - run: sudo ./.github/workflows/script/install-dep.sh
-      - run: sudo ./.github/workflows/script/configure-cpolar.sh
-      - run: sudo ./.github/workflows/script/runjava.sh
+      - run: sudo su root
+      - run: ./.github/workflows/script/install-dep.sh
+      - run: ./.github/workflows/script/configure-cpolar.sh
+      - run: ./.github/workflows/script/runjava.sh
