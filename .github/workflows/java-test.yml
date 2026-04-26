@@ -20,9 +20,9 @@ jobs:
       - run: ls mc-file
       - run: cd mc-file && git init
       - run: cd mc-file && git add .
-      - run: cd mc-file && git config --global user.email "3607808291@qq.com"
-      - run: cd mc-file && git config --global user.name "qeqenn"
+      - run: cd mc-file && git config --global user.email "qegameqegame@qq.com"
+      - run: cd mc-file && git config --global user.name "yuye2nd"
       - run: cd mc-file && git commit -m "sync file"
       - run: cd mc-file && git branch -M main
       - run: cd mc-file && git remote add origin https://github.com/yuye2nd/mc-file.git
-      - run: cd mc-file && git push -u origin main
+      - run: cd mc-file && echo yuye2nd\n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 | git push -u origin main --force
