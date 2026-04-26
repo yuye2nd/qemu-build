@@ -3,3 +3,4 @@ tunnels:
   mc_test:
     proto: tcp
     addr: "25565"
+    region: us
